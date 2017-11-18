@@ -30,7 +30,25 @@ router.get('/:name', function(req, res, next) {
 
 });
 
+
 /*
+var params = {
+  // Get the text from the JSON file.
+  text: require('tone.json').text,
+  tones: 'emotion'
+};
+
+tone_analyzer.tone(params, function(error, response) {
+  if (error)
+    console.log('error:', error);
+  else
+    console.log(JSON.stringify(response, null, 2));
+  }
+);
+
+
+
+
 router.get('/:name', function(req, res, next){
     var searchkey = req.params.name;
     spotifyApi.searchPlaylists(searchkey)
