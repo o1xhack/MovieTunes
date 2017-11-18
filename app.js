@@ -32,7 +32,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/spotify', spotify_routes);
 app.use('/tmdb', tmdb_routes);
-app.use('./tone', tone_routes);
+app.use('/tone', tone_routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

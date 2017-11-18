@@ -15,7 +15,8 @@ var tone_analyzer = new ToneAnalyzerV3({
 router.get('/', function(req, res, next) {
     res.send('tone');
 });
-/*
+
+
 router.get('/:name', function(req, res, next) {
     var searchkey = req.params.name;
     tone_analyzer.tone(searchkey)
@@ -29,7 +30,7 @@ router.get('/:name', function(req, res, next) {
 
 });
 
-
+/*
 router.get('/:name', function(req, res, next){
     var searchkey = req.params.name;
     spotifyApi.searchPlaylists(searchkey)
