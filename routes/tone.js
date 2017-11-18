@@ -3,9 +3,12 @@ var router = express.Router();
 
 var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
 
+var userName = require('../config/tone').username;
+var passWord = require('../config/tone').password;
+
 var tone_analyzer = new ToneAnalyzerV3({
-    username: "b47aadfa-0312-4947-96a6-a63e7daa5633",
-    password: "fZQAELthA634",
+    username: userName,
+    password: passWord,
     version_date: '2017-05-26'
 });
 
