@@ -18,7 +18,7 @@ const Schema = mongoose.Schema
 const user = new Schema({
     username:   String,
     music_keyword:   String,
-    movie:  Int
+    movie:  String
 })
 
 //The mongo collection will be users in the cs411 database...Mongoose adds an 's'
