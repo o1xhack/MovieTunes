@@ -22,7 +22,6 @@ const db = mongoose.connection
 
 const Schema = mongoose.Schema
 
-// NEED TO BE CHANGED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const user = new Schema({
     username    : {
         type    : String,

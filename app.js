@@ -7,7 +7,9 @@ var bodyParser = require('body-parser');
 var SpotifyWebApi = require("spotify-web-api-node");
 const tmdb = require('tmdb-v3');
 var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
-//const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
+//const oauth = require('oauth');
+//const passport = require('passport-jwt');
 
 var index = require('./routes/index');
 //var users = require('./routes/users');
@@ -15,7 +17,7 @@ var spotify_routes = require('./routes/spotify');
 var tmdb_routes = require('./routes/tmdb');
 var tone_routes = require('./routes/tone');
 var api_routes = require('./routes/api');
-//var oauth_routes = require('./routes/oauthTwitterNoPassport');
+var oauth_routes = require('./routes/oauthTwitterNoPassport');
 
 
 var app = express();
@@ -38,7 +40,7 @@ app.use('/spotify', spotify_routes);
 app.use('/tmdb', tmdb_routes);
 app.use('/tone', tone_routes);
 app.use('/api', api_routes);
-//app.use('/oauth', oauth_routes);
+app.use('/oauth', oauth_routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

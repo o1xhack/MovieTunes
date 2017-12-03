@@ -13,7 +13,8 @@ const Twitter = {
     ACCESS_TOKEN_URL: 'https://api.twitter.com/oauth/access_token',
     ACCESS_TOKEN: '778834568-kGeHUbXpeRz6nygI4MvyycKAEPIi3gNqly1Aqn4M',
     ACCESS_TOKEN_SECRET: 'nFsfN6IrngW8OhrBCytY8Eyn9o9rEHXVA08uaUEGVoybc',
-    OAUTH_VERSION: '1.0'
+    OAUTH_VERSION: '1.0',
+    ALGORITHM: 'HMAC-SHA1'
 }
 
 module.exports = Twitter

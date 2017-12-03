@@ -5,33 +5,33 @@ Comments are mine  - PCD
 
 //Get a router instance
 //
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
 //We're going to store info on users in mongo with a schema defined in
 //mongoose, so get a connection and grab the crypto version of the user model (because crypto)
 //
-const User = require('../models/UserWithCrypto')
+const User = require('../models/UserWithCrypto');
 
 //We're also going to pass the access token back and forth in a
 //JSON Web Token (jwt) that is placed in a cookie, so we'll need
 //a jwt package
 //
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 
 //We're using the twitter package to simplify the interaction
 //
-const twitterAPI = require('twitter')
+const twitterAPI = require('twitter');
 
 //Grab configs for Twitter and jwt
 //
-const twitterConfig = require('../config/twitter')
+const twitterConfig = require('../config/twitter');
 //const jwtConfig = require('../config/jwtConfig')
 
 //We're using the oauth package to simplify things a bit, especially signing
 //requests.
 //
-const oauth = require('oauth').OAuth
+const oauth = require('oauth').OAuth;
 
 //Set up oauth with 3rd party info from config file
 //
@@ -258,7 +258,7 @@ router.get('/logout', function (req, res, next) {
             else {
                 console.log("Deleted access token for", result.name)
             }
-            res.render('index', {loggedIn: false})
+            res.render('twitterAccount', {loggedIn: false})
             // oauth render to twitterAccount.pug, but changed to index.html
         })
 
