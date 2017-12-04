@@ -33,13 +33,12 @@ router.get('/:name', function(req, res, next){
     var searchkey = req.params.name;
     spotifyApi.searchPlaylists(searchkey)
         .then(function(data) {
+            var dict = {};
             var values = data.body.playlists.items;
-            var urls = [];
             for(i = 0; i < values.length; i++) {
-                console.log(values[i].external_urls.spotify);
-                urls.push(values[i].external_urls.spotify);
+                dict[values[i].name] = (values[i].external_urls.spotify);
             }
-            res.json(urls);
+            res.json(dict);
             }, function(err) {
             console.error(err);
         });
