@@ -19,7 +19,7 @@
 
 <body ng-app="cs411">
 <div ng-controller="cs411ctrl" ng-init="initApp()">
-    <img src="/images/master-logo.gif"><span class="largeText"> CS411 Group 8: Movie recommendation </span>
+    <img src="/images/master-logo.gif"><span class="largeText">  Department of Computer Science</span>
     <h2>{{h2message}} {{name}}</h2>
     <div class="col-xs-12">
         <form class="form-inline">
@@ -33,16 +33,16 @@
     <div>
         <form class="form-inline" name="inputForm">
             <div class="form-group">
-                <label class="sr-only" for="formName">Email address</label>
-                <input type="text" class="form-control" id="formName" placeholder="Enter name" ng-model="name" required>
+                <label class="sr-only" for="formUsername">Email address</label>
+                <input type="text" class="form-control" id="formUsername" placeholder="Enter username" ng-model="username" required>
             </div>
             <div class="form-group">
-                <label class="sr-only" for="formUID">Email address</label>
-                <input type="text" class="form-control" id="formUID" placeholder="Enter UID" ng-model="UID" required>
+                <label class="sr-only" for="formMusic_keyword">Email address</label>
+                <input type="text" class="form-control" id="formMusic_keyword" placeholder="Enter music" ng-model="music_keyword" required>
             </div>
             <div class="form-group">
-                <label class="sr-only" for="formDepartment">Password</label>
-                <input type="text" class="form-control" id="formDepartment" placeholder="Enter Department" ng-model="department" required>
+                <label class="sr-only" for="formMovie">Password</label>
+                <input type="text" class="form-control" id="formMovie" placeholder="Enter movie" ng-model="movie" required>
                 <input type="hidden" value="{{user._id}}">
             </div>
             <button type="submit" class="btn btn-primary" ng-disabled="inputForm.$invalid" ng-click="createUser()">{{buttonMessage}}</button>
