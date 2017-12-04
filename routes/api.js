@@ -9,7 +9,7 @@ var db = mongoose.connection;
 var Schema = mongoose.Schema;
 var personSchema = new Schema ({
     username:   String,
-    music_keyword:   String,
+    music:   String,
     movie:  String
 });
 
@@ -31,6 +31,7 @@ router.post('/db', function(req, res, next) {
 router.get('/db', function (req, res, next) {
     people.find({}, function (err, results) {
         res.json(results);
+        console.log(results);
     })
 
 });

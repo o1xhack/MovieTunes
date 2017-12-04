@@ -7,7 +7,7 @@ const Twitter = {
     CONSUMER_KEY: 'tiEAkLxkEvohpDGAtu73eOWqm',
     CONSUMER_SECRET: 'DWYMT3Xyoo2wQUd5CxXELXm9EUD6CUqMctlwqkLViMNipnS93N',
     OWNER_ID: '778834568',
-    CALLBACK_URL: 'localhost:3000/twitter/callback',
+    CALLBACK_URL: 'http://localhost:3000/auth/callback',
     REQ_TOKEN_URL: 'https://api.twitter.com/oauth/request_token',
     AUTHORIZE_URL: 'https://api.twitter.com/oauth/authorize',
     ACCESS_TOKEN_URL: 'https://api.twitter.com/oauth/access_token',
