@@ -21,7 +21,16 @@
 <div ng-controller="cs411ctrl" ng-init="initApp()">
     <img src="/images/master-logo.gif"><span class="largeText"> CS411 Group 8: Movie recommendation </span>
     <h2>{{h2message}} {{name}}</h2>
-    <div >
+    <div class="col-xs-12">
+        <form class="form-inline">
+            <h4>Login with Twitter
+                <button class="btn btn-md btn-info" ng-click="">
+                    <span class="glyphicon glyphicon-globe"></span>
+                </button>
+            </h4>
+        </form>
+    </div>
+    <div>
         <form class="form-inline" name="inputForm">
             <div class="form-group">
                 <label class="sr-only" for="formName">Email address</label>
@@ -54,6 +63,27 @@
                     <span class="glyphicon glyphicon-hand-up"></span>
                 </button>
             </li>
+        </ul>
+    </div>
+    <div class="well col-md-7">
+        <h4>
+            Please enter your movie
+        </h4>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Movie Title">
+            <span class="input-group-btn">
+						<button class="btn btn-sm pull-right btn-info" ng-click="">
+							<span class="glyphicon glyphicon-search"></span>
+						</button>
+					</span>
+        </div>
+    </div>
+    <div class = "well col-md-6">
+        <h4>
+            Here are recommended Spotify playlists
+        </h4>
+        <ul class="list-group" id="playlists">
+
         </ul>
     </div>
 </div>
