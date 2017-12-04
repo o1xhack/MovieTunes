@@ -101,4 +101,16 @@ angular.module('cs411', [])
         }
 
 
-    });
+    })
+
+    //This controller handles Movie Search API calling
+    .controller('movieController', function ($scope, $http) {
+        
+        $scope.getTMDbData = function (moviename) {
+            //$scope.("Search with: " + moviename);
+            $http.get('http://localhost:3000/tmdb/' + moviename)
+                .then(function(response){
+                    $scope.movieLists = response.data;
+                })
+        }
+    })

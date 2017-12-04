@@ -11,7 +11,7 @@
     <!-- Angular (minified) -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
     <!--Controllers for this page/app -->
-    <script src="javascripts/controllers.js"></script>
+    <script src="javascripts/controller.js"></script>
     <!-- Local styles -->
     <link rel="stylesheet" href="stylesheets/style.css">
 
@@ -86,5 +86,31 @@
         </ul>
     </div>
 </div>
+
+<!--Test movie API PAGE-->
+<div ng-controller="movieController" class="well col-md-10">
+    <div>
+        <label>Enter the Movie Title:
+            <input type="text" class="form-control" placeholder="Movie Title" ng-model='moviename'>
+        </label>
+        <button ng-click='getTMDbData(moviename)'>GO</button>
+        <br>
+        <p>Inputing the name of movie:  {{ moviename }}</p>
+        <br>
+        <label>Return code:
+            <h4 ng-bind="status"></h4>
+        </label>
+    </div>
+
+    <div class = "well col-md-7">
+
+        <br>
+        <p>{{movieLists}}</p>
+
+        {{error}}
+    </div>
+</div>
+
+
 </body>
 </html>

@@ -14,6 +14,7 @@ router.get('/:name', function(req, res, next){
     tmdb.searchMovie(searchkey)
         .then(function(data) {
             var newdata = JSON.parse(data.body);
+            console.log(newdata.results[0].overview)
             res.json(newdata.results[0].overview);
         });
 });
