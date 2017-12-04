@@ -23,15 +23,14 @@ router.get('/:name', function(req, res, next) {
         tones: 'emotion'
     }
     //var searchkey = req.params.name;
+
     tone_analyzer.tone(searchkey, function(error,response) {
         if (error)
             console.log('error:', error);
         else
 
             console.log(response);
-            res.send(response);
 
-            //console.log(response);
             result = (response.document_tone.tone_categories[0].tones);
             result.sort(function(a, b)
             {
