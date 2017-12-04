@@ -172,20 +172,11 @@ angular.module('cs411', ['ngCookies'])
 
     })
 
-    //This controller handles toggling the display of details in the user list
-    .controller('listController', function ($scope){
-        $scope.display = false;
-
-        $scope.showInfo = function() {
-            $scope.display = !$scope.display;
-        }
 
 
-    })
 
     //This controller handles Movie Search API calling
     .controller('movieController', function ($scope, $http) {
-
 
         $scope.getTMDbData = function (moviename) {
             console.log("Search with: " + moviename);
@@ -212,6 +203,7 @@ angular.module('cs411', ['ngCookies'])
                 })
         }
 
+
         $scope.favoritePlaylist = function (favoriteitem) {
             var request = {
                 method: 'post',
@@ -229,6 +221,64 @@ angular.module('cs411', ['ngCookies'])
                     $scope.getUsers();
                 })
         }
+
+        //READ (GET)
+        $scope.getUsers = function () {
+            $http.get('http://localhost:3000/api/db')
+                .then(function (response) {
+                    $scope.users = response.data;
+                })
+        };
+
+        //UPDATE (PUT)
+        $scope.setUserUpdate = function (user) {
+            $scope.buttonMessage = "Update User";
+            $scope.h2message = "Updating ";
+            $scope.username = user.username;
+            $scope.music = user.music;
+            $scope.dbID = user._id;
+            $scope.movie = user.movie;
+
+        };
+
+
+        //DELETE (DELETE)
+        $scope.deleteUser = function (_id) {
+
+            var request = {
+                method: 'delete',
+                url: 'http://localhost:3000/api/db/' + _id,
+            };
+            $http(request)
+                .then(function (response) {
+                    $scope.inputForm.$setPristine();
+                    $scope.username = $scope.music = $scope.movie = '';
+                    $scope.getUsers();
+                })
+
+        };
+
+        $scope.initContro = function () {
+            $scope.buttonState = "create";
+            $scope.h2message = "Add Likes";
+            $scope.buttonMessage = "Add Likes";
+            $scope.authorized = false
+            $scope.showLogin = false
+            $scope.getUsers()
+            //Grab cookies if present
+            var authCookie = $cookies.get('authStatus')
+            $scope.authorized = !!authCookie
+        }
+    })
+
+    //This controller handles toggling the display of details in the user list
+    .controller('listController', function ($scope){
+        $scope.display = false;
+
+        $scope.showInfo = function() {
+            $scope.display = !$scope.display;
+        }
+
 
     })
 
