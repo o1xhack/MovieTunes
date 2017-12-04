@@ -64,26 +64,52 @@
             </li>
         </ul>
     </div>
-    <div class="well col-md-7">
-        <h4>
-            Please enter your movie
-        </h4>
+    <!--<div ng-controller="movieController" class="well col-md-7">-->
+        <!--<h4>-->
+            <!--Please enter your movie-->
+        <!--</h4>-->
+        <!--<div class="input-group">-->
+            <!--<input type="text" class="form-control" placeholder="Movie Title" ng-model='moviename'>-->
+            <!--<span class="input-group-btn">-->
+						<!--<button class="btn btn-sm pull-right btn-info" ng-click="">-->
+							<!--<span class="glyphicon glyphicon-search"></span>-->
+						<!--</button>-->
+					<!--</span>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class = "well col-md-6">-->
+        <!--<h4>-->
+            <!--Here are recommended Spotify playlists-->
+        <!--</h4>-->
+        <!--<ul class="list-group" id="playlists">-->
+
+        <!--</ul>-->
+    <!--</div>-->
+</div>
+
+<div ng-controller="movieController" class="well col-md-7">
+    <div>
+        <h4>Please enter your movie: </h4>
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Movie Title">
+            <input type="text" class="form-control" placeholder="Movie Title" ng-model='moviename'>
             <span class="input-group-btn">
-						<button class="btn btn-sm pull-right btn-info" ng-click="">
-							<span class="glyphicon glyphicon-search"></span>
-						</button>
-					</span>
+                            <button class="btn btn-sm pull-right btn-info" ng-click='getTMDbData(moviename)'>
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
         </div>
     </div>
+
     <div class = "well col-md-6">
         <h4>
             Here are recommended Spotify playlists
         </h4>
+
         <ul class="list-group" id="playlists">
 
         </ul>
+
+        <p>{{spotifyResult}}</p>
     </div>
 </div>
 
