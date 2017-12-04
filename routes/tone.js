@@ -27,7 +27,7 @@ router.get('/:name', function(req, res, next) {
         if (error)
             console.log('error:', error);
         else
-            //console.log(response);
+            console.log(response);
             res.send(response);
 
     });
