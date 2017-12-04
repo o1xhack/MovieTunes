@@ -75,7 +75,7 @@ angular.module('cs411', [])
 
             var request = {
                 method: 'delete',
-                url: 'http://localhost:3000/api/db/' + _id ,
+                url: 'http://localhost:3000/api/db/' + _id
             };
             $http(request)
                 .then(function(response){
