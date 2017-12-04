@@ -212,6 +212,24 @@ angular.module('cs411', ['ngCookies'])
                 })
         }
 
+        $scope.favoritePlaylist = function (favoriteitem) {
+            var request = {
+                method: 'post',
+                url: 'http://localhost:3000/api/db',
+                data: {
+                    username: "default",
+                    music: favoriteitem.name,
+                    movie: favoriteitem.external_urls.spotify
+                }
+            };
+            $http(request)
+                .then(function (response) {
+                    $scope.inputForm.$setPristine();
+                    $scope.username = $scope.music = $scope.movie = '';
+                    $scope.getUsers();
+                })
+        }
+
     })
 
 

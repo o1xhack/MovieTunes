@@ -198,7 +198,7 @@
 
     <div class = "well col-md-7" ng-repeat="m in spotifyResult">
         <div class="movie">
-            <p> <a ng-href="{{m.external_urls.spotify}}">{{m.name}}</a></p>
+            <p > <a ng-href="{{m.external_urls.spotify}}">{{m.name}}</a> <button ng-click='favoritePlaylist(m)'>Favorite It</button></p>
 
         </div>
     </div>
