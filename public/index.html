@@ -19,7 +19,7 @@
 <body ng-app="cs411">
 <div ng-controller="cs411ctrl" ng-init="initApp()">
     <img src="/images/master-logo.gif"><span class="largeText">  Department of Computer Science</span>
-    <h2>{{h2message}} {{name}}</h2>
+    <h2>{{h2message}} {{username}}</h2>
     <div class="col-xs-12">
         <form class="form-inline">
             <h4>Login with Twitter
@@ -51,7 +51,7 @@
     <div class = "well col-md-6">
         <ul class="list-group">
             <li ng-controller="listController" class="list-group-item largeText" ng-repeat="user in users">{{user.name}}
-                <span ng-show="display"> {{user.UID}} {{user.department}}</span>
+                <span ng-show="display"> {{user.UID}} {{user.movie}}</span>
                 <button class="btn btn-sm pull-right btn-danger" ng-click="deleteUser(user._id);">
                     <span class="glyphicon glyphicon-trash"></span>
                 </button>
