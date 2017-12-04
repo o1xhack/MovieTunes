@@ -121,8 +121,17 @@ angular.module('cs411', [])
             $http.get('http://localhost:3000/tone/' + overview)
                 .then(function(response){
                     $scope.toneAna = response.data;
+                    $scope.getSpotifyCalling(response.data);
                 })
         }
+
+        $scope.getSpotifyCalling = function (keywords){
+            $http.get('http://localhost:3000/spotify/' + keywords)
+                .then(function(response){
+                    $scope.spotifyResult = response.data;
+                })
+        }
+
     })
 
 
