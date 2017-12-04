@@ -13,7 +13,8 @@ router.get('/:name', function(req, res, next){
     var searchkey = req.params.name;
     tmdb.searchMovie(searchkey)
         .then(function(data) {
-            res.json(data.body);
+            var newdata = JSON.parse(data.body);
+            res.json(newdata.results[0].overview);
         });
 });
 
