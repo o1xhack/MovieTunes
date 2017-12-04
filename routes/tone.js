@@ -28,7 +28,13 @@ router.get('/:name', function(req, res, next) {
             console.log('error:', error);
         else
             //console.log(response);
-            res.send(response);
+            result = (response.document_tone.tone_categories[0].tones);
+            result.sort(function(a, b)
+            {
+                return a.score < b.score
+            });
+            var topresults = result[0].tone_name + "+" + result[1].tone_name;
+            res.send(topresults);
 
     });
 });
