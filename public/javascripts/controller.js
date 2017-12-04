@@ -84,8 +84,8 @@ angular.module('cs411', ['ngCookies'])
 
         $scope.initApp = function () {
             $scope.buttonState = "create";
-            $scope.h2message = "Add user";
-            $scope.buttonMessage = "Add User";
+            $scope.h2message = "Add Likes";
+            $scope.buttonMessage = "Add Likes";
             $scope.authorized = false
             $scope.showLogin = false
             $scope.getUsers()
