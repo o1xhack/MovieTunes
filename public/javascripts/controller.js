@@ -199,6 +199,10 @@ angular.module('cs411', ['ngCookies'])
         $scope.getSpotifyCalling = function (keywords){
             $http.get('http://localhost:3000/spotify/' + keywords)
                 .then(function(response){
+                    var results = response.data;
+                    results.sort(function (a, b) {
+                        return 0.5 - Math.random()
+                    })
                     $scope.spotifyResult = response.data;
                 })
         }
