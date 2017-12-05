@@ -12,10 +12,13 @@
     "express": "~4.15.5",
     "express-session": "^1.15.6",
     "jade": "~1.11.0",
+    "mongoose": "^4.13.6",
     "morgan": "~1.9.0",
     "passport": "^0.4.0",
     "passport-twitter": "^1.0.4",
     "serve-favicon": "~2.4.5",
-    "spotify-web-api-node": "^2.5.0"
+    "spotify-web-api-node": "^2.5.0",
+    "tmdb-v3": "^2.2.1",
+    "watson-developer-cloud": "^2.42.0"
   }
 }
