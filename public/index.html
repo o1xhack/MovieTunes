@@ -71,25 +71,25 @@
 
 <!--Main Controller-->
 <body ng-app="cs411">
-<div ng-controller="cs411ctrl" ng-init="initApp()">
-    <img src="/images/master-logo.gif"><span class="largeText">CS 411 Group 8</span>
-    <h2>{{h2message}} {{name}}</h2>
+<div ng-controller="movieController" ng-init="initApp()">
+    <h2>CS 411 Group 8</span></h2>
+    <!--<h2>{{h2message}} {{name}}</h2>-->
     <div>
         <form class="form-inline" name="inputForm">
-            <div class="form-group">
-                <label class="sr-only" for="formUsername">Email address</label>
-                <input type="text" class="form-control" id="formUsername" placeholder="Enter username" ng-model="username" required>
-            </div>
-            <div class="form-group">
-                <label class="sr-only" for="formMusic">Email address</label>
-                <input type="text" class="form-control" id="formMusic" placeholder="Enter music" ng-model="music" required>
-            </div>
-            <div class="form-group">
-                <label class="sr-only" for="formMovie">Password</label>
-                <input type="text" class="form-control" id="formMovie" placeholder="Enter movie" ng-model="movie" required>
-                <input type="hidden" value="{{user._id}}">
-            </div>
-            <button type="submit" class="btn btn-primary" ng-disabled="inputForm.$invalid" ng-click="createUser()">{{buttonMessage}}</button>
+            <!--<div class="form-group">-->
+                <!--<label class="sr-only" for="formUsername">Email address</label>-->
+                <!--<input type="text" class="form-control" id="formUsername" placeholder="Enter username" ng-model="username" required>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<label class="sr-only" for="formMusic">Email address</label>-->
+                <!--<input type="text" class="form-control" id="formMusic" placeholder="Enter music" ng-model="music" required>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<label class="sr-only" for="formMovie">Password</label>-->
+                <!--<input type="text" class="form-control" id="formMovie" placeholder="Enter movie" ng-model="movie" required>-->
+                <!--<input type="hidden" value="{{user._id}}">-->
+            <!--</div>-->
+            <!--<button type="submit" class="btn btn-primary" ng-disabled="inputForm.$invalid" ng-click="createUser()">{{buttonMessage}}</button>-->
         </form>
         <div ng-hide="authorized">
             <br/>
@@ -105,7 +105,7 @@
         </div>
         <br/>
         <div ng-show="authorized">
-            <button class="btn btn-sm" ng-click="logout()">Log out</button>
+            <button class="btn btn-primary" ng-click="logout()">Log out Twitter Account</button>
         </div>
     </div>
     <div class="col-xs-12">
@@ -114,7 +114,7 @@
     <div class = "well col-md-7">
         <ul class="list-group">
             <li class="list-group-item largeText" ng-repeat="user in users" style="height:80px;">
-                <span ng-show="display"> {{user.music}} {{user.movie}}</span>
+                <!--<span ng-show="display"> {{user.music}} {{user.movie}}</span>-->
                 {{user.username}}: <a ng-href="{{user.movie}}" target="_blank">{{user.music}}</a>
                 <button class="btn btn-sm pull-right btn-danger" ng-click="deleteUser(user._id);">
                     <span class="glyphicon glyphicon-trash"></span>
@@ -128,11 +128,7 @@
             </li>
         </ul>
     </div>
-</div>
 
-
-<!--Movie Controller Stuff-->
-<div ng-controller="movieController" ng-init="initContro">
     <div class="col-xs-12">
         <h2>Search Playlist with Movie Title:</h2>
         <br>
@@ -171,56 +167,69 @@
 
 </div>
 
-<!--Test movie API PAGE-->
-<div ng-controller="movieController" class="well col-md-10">
-    <div>
-        <label>Enter the Movie Title:
-            <input type="text" class="form-control" placeholder="Movie Title" ng-model='moviename'>
-        </label>
-        <button ng-click='getTMDbData(moviename)'>GO</button>
-        <br>
-        <p>Inputing the name of movie:  {{ moviename }}</p>
-        <br>
-        <label>Return code:
-            <h4 ng-bind="status"></h4>
-        </label>
-    </div>
+<div class="col-xs-12">
 
-    <div class = "well col-md-7">
-
-        <br>
-        <p>Movie api Result:</p>
-        <p>{{movieLists}}</p>
-
-        {{error}}
-    </div>
-
-    <div class = "well col-md-7">
-
-        <br>
-        <p>tone api result:</p>
-        <p>{{toneAna}}</p>
-
-        {{error}}
-    </div>
-
-    <div class = "well col-md-7">
-
-        <br>
-        <p>spotify api result:</p>
-        <p>{{spotifyResult}}</p>
-
-        {{error}}
-    </div>
-
-    <div class = "well col-md-7" ng-repeat="m in spotifyResult">
-        <div class="movie">
-            <p > <a ng-href="{{m.external_urls.spotify}}" target="_blank">{{m.name}}</a> <button ng-click='favoritePlaylist(m)'>Favorite It</button></p>
-
-        </div>
-    </div>
-
+    <br>
+    <br>
+    <br>
+    <h3>Contribute:</h3>
+    <h5>Spotify Web API</h5>
+    <h5>TMDb API</h5>
+    <h5>IBM API</h5>
+    <h5>* 2017 BU</h5>
+    <br>
 </div>
+
+<!--&lt;!&ndash;Test movie API PAGE&ndash;&gt;-->
+<!--<div ng-controller="movieController" class="well col-md-10">-->
+    <!--<div>-->
+        <!--<label>Enter the Movie Title:-->
+            <!--<input type="text" class="form-control" placeholder="Movie Title" ng-model='moviename'>-->
+        <!--</label>-->
+        <!--<button ng-click='getTMDbData(moviename)'>GO</button>-->
+        <!--<br>-->
+        <!--<p>Inputing the name of movie:  {{ moviename }}</p>-->
+        <!--<br>-->
+        <!--<label>Return code:-->
+            <!--<h4 ng-bind="status"></h4>-->
+        <!--</label>-->
+    <!--</div>-->
+
+    <!--<div class = "well col-md-7">-->
+
+        <!--<br>-->
+        <!--<p>Movie api Result:</p>-->
+        <!--<p>{{movieLists}}</p>-->
+
+        <!--{{error}}-->
+    <!--</div>-->
+
+    <!--<div class = "well col-md-7">-->
+
+        <!--<br>-->
+        <!--<p>tone api result:</p>-->
+        <!--<p>{{toneAna}}</p>-->
+
+        <!--{{error}}-->
+    <!--</div>-->
+
+    <!--<div class = "well col-md-7">-->
+
+        <!--<br>-->
+        <!--<p>spotify api result:</p>-->
+        <!--<p>{{spotifyResult}}</p>-->
+
+        <!--{{error}}-->
+    <!--</div>-->
+
+    <!--<div class = "well col-md-7" ng-repeat="m in spotifyResult">-->
+        <!--<div class="movie">-->
+            <!--<p > <a ng-href="{{m.external_urls.spotify}}" target="_blank">{{m.name}}</a> <button ng-click='favoritePlaylist(m)'>Favorite It</button></p>-->
+
+        <!--</div>-->
+    <!--</div>-->
+
+<!--</div>-->
 
 
 </body>
