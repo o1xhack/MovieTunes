@@ -14,4 +14,3 @@ MEAN app: MongoDB, Express, Angular.js, Node.js
 In webstorm app.
 
 Run with bin/www file and put localhost:3000 at your website.
-
