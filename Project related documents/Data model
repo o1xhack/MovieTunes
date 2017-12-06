@@ -1,0 +1,10 @@
+/*
+  In practice, we install playlist names in music, playlist links in movie.
+*/
+const Schema = mongoose.Schema
+const user = new Schema({
+    username:   String,
+    music:   String,
+    movie:  Int
+})
+
