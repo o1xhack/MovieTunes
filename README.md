@@ -1,6 +1,7 @@
-# MovieTune
+# MovieTunes
 
 CS411 Group 8 Project
+Fall 2017
 
 Creater: [Yuxiao Wang](https://github.com/o1xhack), [Xuefei Liu](https://github.com/sliuxf), Sam Moseman, Nate Reddi
 
@@ -24,6 +25,13 @@ Then search any movie you want to get the result of the playlists recommends fro
 ## MongoDB notice
 
 Please has your MongoDB setup and open. It will create the cs411 database automatically. 
+
+
+
+## Test
+
+I have a code section in index.html that was commented. You can uncomment it to test the three API callings.
+
 
 
 ----
