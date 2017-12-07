@@ -1,11 +1,11 @@
 // Waston Tone Analyzer API Key
 
 
-
+https://gateway.watsonplatform.net/tone-analyzer/api
 const TONE = {
-    url: "https://gateway.watsonplatform.net/tone-analyzer/api",
-    username: "b47aadfa-0312-4947-96a6-a63e7daa5633",
-    password: "fZQAELthA634"
+    url: "",
+    username: "",
+    password: ""
 
 }
 
