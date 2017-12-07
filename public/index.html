@@ -26,20 +26,6 @@
     <h4>Yuxiao Wang, Sam Moseman, Nate Reddi, Xuefei Liu</h4>
     <div>
         <form class="form-inline" name="inputForm">
-            <!--<div class="form-group">-->
-                <!--<label class="sr-only" for="formUsername">Email address</label>-->
-                <!--<input type="text" class="form-control" id="formUsername" placeholder="Enter username" ng-model="username" required>-->
-            <!--</div>-->
-            <!--<div class="form-group">-->
-                <!--<label class="sr-only" for="formMusic">Email address</label>-->
-                <!--<input type="text" class="form-control" id="formMusic" placeholder="Enter music" ng-model="music" required>-->
-            <!--</div>-->
-            <!--<div class="form-group">-->
-                <!--<label class="sr-only" for="formMovie">Password</label>-->
-                <!--<input type="text" class="form-control" id="formMovie" placeholder="Enter movie" ng-model="movie" required>-->
-                <!--<input type="hidden" value="{{user._id}}">-->
-            <!--</div>-->
-            <!--<button type="submit" class="btn btn-primary" ng-disabled="inputForm.$invalid" ng-click="createUser()">{{buttonMessage}}</button>-->
         </form>
         <div ng-hide="authorized">
             <br/>
@@ -65,17 +51,10 @@
     <div class = "well col-md-7">
         <ul class="list-group">
             <li class="list-group-item largeText" ng-repeat="user in users" style="height:80px;">
-                <!--<span ng-show="display"> {{user.music}} {{user.movie}}</span>-->
                 {{user.username}}: <a ng-href="{{user.movie}}" target="_blank">{{user.music}}</a>
                 <button class="btn btn-sm pull-right btn-danger" ng-click="deleteUser(user._id);">
                     <span class="glyphicon glyphicon-trash"></span>
                 </button>
-                <!--<button class="btn btn-sm pull-right btn-info" ng-click="showInfo(user._id);">-->
-                    <!--<span class="glyphicon glyphicon-search"></span>-->
-                <!--</button>-->
-                <!--<button class="btn btn-sm pull-right btn-warning" ng-click="setUserUpdate(user);">-->
-                    <!--<span class="glyphicon glyphicon-hand-up"></span>-->
-                <!--</button>-->
             </li>
         </ul>
     </div>
