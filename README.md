@@ -22,6 +22,11 @@ Run with bin/www file and put localhost:3000 at your website.
 Then search any movie you want to get the result of the playlists recommends from Spotify.
 
 
+### API notice
+
+You need to put your own api token key in the config folder inside every javascript file
+
+
 ## MongoDB notice
 
 Please has your MongoDB setup and open. It will create the cs411 database automatically. 
