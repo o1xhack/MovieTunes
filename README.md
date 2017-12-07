@@ -11,7 +11,8 @@ MEAN app: MongoDB, Express, Angular.js, Node.js
 ----
 
 
-# Compile/Run
+## Compile/Run
+
 
 Open WebStorm app.
 
@@ -27,13 +28,13 @@ Then search any movie you want to get the result of the playlists recommends fro
 You need to put your own api token key in the config folder inside every javascript file
 
 
-## MongoDB notice
+### MongoDB notice
 
 Please has your MongoDB setup and open. It will create the cs411 database automatically. 
 
 
 
-## Test
+### Test
 
 I have a code section in index.html that was commented. You can uncomment it to test the three API callings.
 
@@ -42,7 +43,8 @@ I have a code section in index.html that was commented. You can uncomment it to 
 ----
 
 
-# Problem
+## Problem
+
 
 The IBM Watson API only has 5 emotions, so that's will limit our application of recommendation.
 
@@ -52,7 +54,8 @@ The Auth of Twitter may fail in some awkward cases.
 ----
 
 
-# Open Source
+## Open Source
+
 
 Thanks for the API we are using:
 
@@ -64,7 +67,8 @@ Thanks for the API we are using:
 ----
 
 
-# Changes
+## Changes
+
 
 As our original idea is to put songs and get the movie recommendation, but changes happened
 
@@ -74,7 +78,8 @@ Due to limitation and consideration, we revert it to put movie and get the playl
 ----
 
 
-# Copyright
+## Copyright
+
 
 This is a BU cs411 class project.
 
