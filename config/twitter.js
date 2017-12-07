@@ -4,17 +4,17 @@
 
 
 const Twitter = {
-    CONSUMER_KEY: 'tiEAkLxkEvohpDGAtu73eOWqm',
-    CONSUMER_SECRET: 'DWYMT3Xyoo2wQUd5CxXELXm9EUD6CUqMctlwqkLViMNipnS93N',
-    OWNER_ID: '778834568',
-    CALLBACK_URL: 'http://localhost:3000/auth/callback',
-    REQ_TOKEN_URL: 'https://api.twitter.com/oauth/request_token',
-    AUTHORIZE_URL: 'https://api.twitter.com/oauth/authorize',
-    ACCESS_TOKEN_URL: 'https://api.twitter.com/oauth/access_token',
-    ACCESS_TOKEN: '778834568-kGeHUbXpeRz6nygI4MvyycKAEPIi3gNqly1Aqn4M',
-    ACCESS_TOKEN_SECRET: 'nFsfN6IrngW8OhrBCytY8Eyn9o9rEHXVA08uaUEGVoybc',
-    OAUTH_VERSION: '1.0',
-    ALGORITHM: 'HMAC-SHA1'
+    CONSUMER_KEY: '',
+    CONSUMER_SECRET: '',
+    OWNER_ID: '',
+    CALLBACK_URL: '',
+    REQ_TOKEN_URL: '',
+    AUTHORIZE_URL: '',
+    ACCESS_TOKEN_URL: '',
+    ACCESS_TOKEN: '',
+    ACCESS_TOKEN_SECRET: '',
+    OAUTH_VERSION: '',
+    ALGORITHM: ''
 }
 
 module.exports = Twitter
