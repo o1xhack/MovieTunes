@@ -11,6 +11,16 @@ MEAN app: MongoDB, Express, Angular.js, Node.js
 ----
 
 
+## Intro
+
+All project codes is in folder "movietunesapp".
+
+Other related infoamtion is in foler "Project related documents"
+
+
+----
+
+
 ## Compile/Run
 
 
@@ -31,7 +41,6 @@ You need to put your own api token key in the config folder inside every javascr
 ### MongoDB notice
 
 Please has your MongoDB setup and open. It will create the cs411 database automatically. 
-
 
 
 ### Test
