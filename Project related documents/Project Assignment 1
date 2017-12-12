@@ -1,0 +1,23 @@
+Deliverables: 1. 
+
+1. A written overview of both of your team's ideas, one paragraph per idea. (I just need one paper per team.) 
+
+2. One team member will describe their idea to the class in Week 4. Here are a few requirements for your application: 
+
+1. It must utilize a database. A simple way to meet this requirement is to require a user to store profile information in the database. You’ll also be using it as a cache. 
+
+2. It must correlate at least two publicly available data sets via API from the Internet. Examples might be weather/climate data from NOAA, crime statistics from the FBI, and so on. A great place to get started is https://apigee.com/providers?apig_cc=1, which is a repository of datasets and APIs, and https://www.programmableweb.com. Another good place to search for data is http://data.gov. The City of Boston also has data available at data.cityofboston.gov. Your application must correlate these data sets in some way; for example, pull a user’s playlist from Spotify and correlate it with a feed that has concert dates to alert the user of bands that they like that are playing nearby. Use of the Google Maps or Geolocation service does not count toward your two APIs 
+
+3. It must use third-party authentication, for example logging in with Twitter or Facebook. Additional constraints may be placed on the project as the semester progresses. At this point in the project you should not be thinking much of the technical aspects of the site...this part of the project is a business function. The technical design will come later. Just think about the user benefits for now, not the technical implementation. That being said, browsing through available APIs can be a good way to spark your imagination. A Google search for 'databases with public API' will give you a nice list in addition to those listed above. One member of your group should submit your two proposals on Blackboard by the due
+ date and time.
+
+IDEAS:
+Reverse Image search for finding similar clothing 
+Something with bitcoin 
+Trump 
+Movie matcher
+Linking events with hubway or traffic or uber prices 
+
+
+The user will input a spotify playlist, and we will use IBM Watson’s tone analyzer to measure the emotions of the playlist.  We will then use these to recommend movies based on genres taken from IMDb, and the user will also be able to enter a keyword to filter movies further based on their plots.
+Plan to use Boston University Course Description API for the user to enter desired courses, and then take the professors from the API and run them through the RateMyProfessor API and display all of their ratings in a table so that the user can easily see which classes to take. 
